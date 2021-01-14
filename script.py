@@ -9,7 +9,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 #%%
 
-files=os.listdir("C:\\Users\\asus\\Desktop\\5th SEM\\DIP\\Pict20")
+files=os.listdir("C:\\Users\\asus\\Desktop\\DIP\\Pict20")
 
 arr=[]    
 for i in files:
@@ -57,7 +57,7 @@ def read(file):
 #histogram original image
     hist=plt.hist(gray.ravel(),bins=256)
     plt.title(file+' Histogram')
-    #plt.savefig("C:\\Users\\asus\\Desktop\\5th SEM\\DIP\\res\\"+file+".jpg")
+    #plt.savefig("C:\\Users\\asus\\Desktop\\"+file+".jpg")
     plt.show(hist)
 
 #%%
@@ -117,16 +117,5 @@ plt.show(gamma_hist)
 median=filters.median(eq_img)
 io.imshow(median)
     
-
-#%%
-"""
-import pandas as pd
-
-df=pd.DataFrame([A,B,C,D,E,F],index=['A','B','C','D','E','F'],dtype=int)
-df.to_excel('used.xlsx')
-
-files_label=pd.DataFrame(files)
-df.to_excel('files.xlsx')
-"""
 
 
